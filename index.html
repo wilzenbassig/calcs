@@ -85,46 +85,64 @@
 						</div>
 						<div class="card-body text-success">
 							<div class="row">
-								<div class="col-lg-7 order-1 order-lg-1 justify-content-md-center">
-									<a href="http://bettacare101.com/tankmates"><img class="img-fluid" src="/images/planted.jpg" alt="Betta tankmate aquarium"></a>
-									<br>
-									<br>
-								</div>
-								<div class="col-lg-5 order-2 order-lg-2">
-									
-									<a href="http://bettacare101.com/tankmates"><h3><u>Betta Tankmates</u></h3></a>
-									<p style="color:#333">Wondering what other fish are compatible with bettas or looking for betta-friendly fish to make your aquarium a little more lively? Many betta owners often consider getting their bettas a tankmate or two but believe that because bettas can be such fierce fighters, bettas cannot be housed with other fish. Even though there are some limitations on what can and cannot live with bettas, there are still many other great choices for possible tankmates.</p>
-									
-								</div>
+								<script>
+									var $ = function(id) {
+										return document.getElementById(id);
+									};
+								
+									// var length = $("length");
+									// var width = $("width");
+									// var height = $("height");
+								
+									var amountVolume = 0;
+									function calculateVolume(length, width, height) {
+								
+										console.log(length,width,height);
+										amountVolume = parseFloat(length) * parseFloat(width) * 
+									parseFloat(height);
+									var volumeRound = amountVolume.toFixed(2);
+										$('volume').value = volumeRound;
+									};
+								
+									</script>
+									<div id="wrapper">
+									<form>
+									<h1>Surface Area & Volume</h1>
+								
+									<p>Length:
+								
+									<input type="text" id="length" value="0"/>
+								
+									</p>
+									<br />
+									<p>Width:
+								
+										<input type="text" id="widthData" value="0"/>
+								
+									</p>
+									<br />
+									<p>Height:
+								
+										<input type="text" id="heightData" value="0"/>
+								
+									</p>
+									<br />
+									<p class="change">Surface Area:
+								
+										<input type="text" id="area" disabled="disabled" />
+									</p>
+									<br />
+									<p class="volume">Volume:
+								
+										<input type="text" id="volume" disabled="disabled" />
+									</p>
+									<br />
+									<input type="button" id="calculate" onClick="calculateVolume(length.value, widthData.value, heightData.value)" value="Calculate Volume"/>
+								   </form>
+								  </div>
 							</div>
 						</div>
 					</div>
-				<br>
-				<h3 class="text-success">More Articles</h3>
-				<div class="card-deck">
-					<div class="card border-success mb-3">
-						<a href="http://bettacare101.com/introduction"><img class="card-img-top" src="/images/ricepaddy.jpg" alt="Betta rice paddy"></a>
-						<div class="card-body">
-							<a href="http://bettacare101.com/introduction"><h5 class="card-title"><u>Introduction</u></h5></a>
-							<p class="card-text">Bettas, or Betta splendens for the scientific folk, came from the South East lands of Siam, modern day Thailand, hence the name Siamese fighting fish. They first became pets around 150 years ago and became very popular. Although mistakenly known...<a class="text-muted" href="http://bettacare101.com/introduction">Read More</a></p>
-						</div>
-					</div>
-					<div class="card border-success mb-3">
-						<a href="http://bettacare101.com/behavior"><img class="card-img-top" src="/images/behavior.jpg" alt="Betta fish flaring"></a>
-						<div class="card-body">
-							<a href="http://bettacare101.com/behavior"><h5 class="card-title"><u>Betta Behavior</u></h5></a>
-							<p class="card-text">Bettas are well-known for their aggressiveness. When a betta sees a rival male, both will flare their fins and tear each other up. In the wild, they don't usually kill each other. Instead, the loser swims away. However, in a small aquarium... <a class="text-muted" href="http://bettacare101.com/behavior">Read More</a></p>
-						</div>
-					</div>
-					<div class="card border-success mb-3">
-						<a href="http://bettacare101.com/tricks"><img class="card-img-top" src="/images/tricks.jpg" alt="Blue halfmoon betta"></a>
-						<div class="card-body">
-							<a href="http://bettacare101.com/tricks"><h5 class="card-title"><u>Teach Your Betta Tricks</u></h5></a>
-							<p class="card-text">Did you know it's possible to teach your betta how to do tricks? Like how to follow your finger around the aquarium, flare on command, or even swim through a hoop? Check out this article that teaches you how to train your betta! <a class="text-muted" href="http://bettacare101.com/tricks">Read More</a></p>
-						</div>
-					</div>
-				</div>
-				<br>
 				<br>
 			</div>
 			
