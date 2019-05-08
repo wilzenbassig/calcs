@@ -1,0 +1,157 @@
+body
+{
+background-color: #3B5F7B;
+}
+body
+{
+background-image:
+url('../layout/background3.png'); 
+background-repeat: no-repeat;
+background-position: top;
+background-attachment: scroll;
+}
+div.content
+{
+font-family: arial,sans-serif;
+font-size:90%;
+}
+h1 
+{
+font-size:1.8em
+}
+h2
+{
+font-size:1.6em
+}
+h3
+{
+font-size:1.4em
+}
+h4
+{
+font-size:1.2em
+}
+h5
+{
+font-size:1em
+}
+h6
+{
+font-size:.8em
+}
+p
+{
+font-size:1em
+}
+li
+{
+font-size:1em
+}
+div.main
+{
+margin-left: auto; 
+margin-right:auto; 
+margin-top: 314px; 
+width: 780px; 
+height: 1700px;
+border-style:solid;
+border-width:0px;
+}
+div.menu
+{
+position: relative; 
+width: 780px; 
+top: -30px; 
+left: 0px; 
+height: 45px;
+border-style:solid;
+border-width:0px;
+z-index:3000;
+}
+div.adtop
+{
+position: relative; 
+top: 3px; 
+left: 0px; 
+width: 470px; 
+height: 30px;
+border-style:solid;
+border-width:0px;
+float: left;
+}
+div.search
+{
+position: relative;
+top: 3px; 
+left: 0px; 
+width: 310px; 
+height: 30px;
+border-style:solid;
+border-width:0px;
+float: right;
+}
+div.sidead
+{
+position: relative; 
+top: 50px; 
+left: 0px; 
+width: 160px;
+height: 600px;
+border-style:solid;
+border-width:0px;
+float: left;
+}
+div.content
+{
+position: relative; 
+top: 50px; 
+left: -20px; 
+width: 570px;
+height: 1460px;
+border-style:solid;
+border-width: 0px;
+float: right;
+}
+div.donations
+{
+position: relative; 
+top: 50px; 
+left: -20px; 
+width: 570px;
+height: 1160px;
+border-style:solid;
+border-width: 0px;
+float: right;
+}
+div.simplegallery1
+{
+position: relative; 
+top: 100px; 
+margin-left: auto; 
+margin-right:auto;
+width: 520px; 
+height: 370px;
+border-style:solid;
+border-width:0px;
+}
+div.sitemeter
+{
+position: relative; 
+top: -150px; 
+left: 10px; 
+width: 160px; 
+height: 10px; 
+z-index:-1;
+float: left;
+}
+div.copyright
+{
+position: absolute;
+top: 1608px;
+left:475px;
+width: 864px;
+height: 20px;
+border-style: solid:
+border-width: 1px;
+}
+
