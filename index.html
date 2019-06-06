@@ -63,7 +63,7 @@
 					<h2>Simple Beam Bending Calc</h2>
 				</div>
 				<div class="card-body text-success">
-					<script>
+					<!--<script>
 						function bending()
 						{
 							b = document.getElementById("width").valueAsNumber;
@@ -99,6 +99,7 @@
 							
 						}
 					</script>
+				-->
 					<div class="row">
 						<div class="col-md-6">
 							<div class="row">
@@ -108,39 +109,48 @@
 								<div class="form-group row">
 									<label for="width" class="col-sm-4 col-form-label">Width (in.)</label>
 									<div class="col-sm-8">
-										<input type="number" class="form-control" id="width" placeholder="0" onchange="bending()">
+										<input type="range" min=".125" max="9.25" value="1.5" step=".125" class="slider" id="width" onchange="bending()">									
+										<span id="owidth"></span> in	
+										
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="depth" class="col-sm-4 col-form-label">Depth (in.)</label>
 									<div class="col-sm-8">
-										<input type="number" class="form-control" id="depth" placeholder="0" onchange="bending()">
+											<input type="range" min=".125" max="13.5" value="7.25" step=".125" class="slider" id="depth" onchange="bending()">									
+											<span id="odepth"></span> in
 									</div>
 								</div>
 								<div class="form-group row">
 										<label for="DL" class="col-sm-4 col-form-label">Dead Load (PSF)</label>
 										<div class="col-sm-8">
-											<input type="number" class="form-control" id="DL" placeholder="0" onchange="bending()">
+											<input type="range" min="0" max="30" value="10" step="5" class="slider" id="DL" onchange="bending()">									
+											<span id="oDL"></span> PSF
 										</div>
 								</div>
 								<div class="form-group row">
 									<label for="LL" class="col-sm-4 col-form-label">Live Load (PSF)</label>
 									<div class="col-sm-8">
-										<input type="number" class="form-control" id="LL" placeholder="0" onchange="bending()">
+										<input type="range" min="0" max="100" value="20" step="20" class="slider" id="LL" onchange="bending()">									
+										<span id="oLL"></span> PSF								
 									</div>
 								</div>
 								<div class="form-group row">
 										<label for="trib" class="col-sm-4 col-form-label">Tributary Width (ft)</label>
 										<div class="col-sm-8">
-											<input type="number" class="form-control" id="trib" placeholder="0" onchange="bending()">
+											<input type="range" min=".25" max="20" value="10" step="0.25" class="slider" id="trib" onchange="bending()">									
+											<span id="otrib"></span> ft
+											
 										</div>
 								</div>
 								<div class="form-group row">
 										<label for="span" class="col-sm-4 col-form-label">Span (ft.)</label>
 										<div class="col-sm-8">
-											<input type="number" class="form-control" id="span" placeholder="0" onchange="bending()">
+											<input type="range" min=".25" max="20" value="10" step="0.25" class="slider" id="span" onchange="bending()">									
+											<span id="ospan"></span> ft
 										</div>
 								</div>
+								
 							</form>
 						</div>					
 						<div class="col-md-6">	
@@ -155,7 +165,7 @@
 									</div>
 								</div>
 								<div class="form-group row">
-										<label for="reaction" class="col-sm-4 col-form-label">Vx</label>
+										<label for="reaction" class="col-sm-4 col-form-label">V<sub>x</sub></label>
 										<div class="col-sm-8">
 											<input type="number" class="form-control" id="shear" placeholder="0" onchange="bending()">
 										</div>
@@ -185,7 +195,94 @@
 				<br>
 			</div>
 		</div>
-		<br>	
+		<br>
+		<script>
+			var sliderDepth = document.getElementById("depth");
+			var outputDepth = document.getElementById("odepth");
+			outputDepth.innerHTML = sliderDepth.value;
+			
+			sliderDepth.oninput = function() {
+				outputDepth.innerHTML = this.value;
+			}
+			
+			var sliderTrib = document.getElementById("trib");
+			var outputTrib = document.getElementById("otrib");
+			outputTrib.innerHTML = sliderTrib.value;
+				
+			sliderTrib.oninput = function() {
+					outputTrib.innerHTML = this.value;
+			}
+
+			var sliderSpan = document.getElementById("span");
+			var outputSpan = document.getElementById("ospan");
+			outputSpan.innerHTML = sliderSpan.value;
+			
+			sliderSpan.oninput = function() {
+				outputSpan.innerHTML = this.value;
+			}
+
+			var sliderLL = document.getElementById("LL");
+			var outputLL = document.getElementById("oLL");
+			outputLL.innerHTML = sliderLL.value;
+			
+			sliderLL.oninput = function() {
+				outputLL.innerHTML = this.value;
+			}
+
+			var sliderDL = document.getElementById("DL");
+			var outputDL = document.getElementById("oDL");
+			outputDL.innerHTML = sliderDL.value;
+			
+			sliderDL.oninput = function() {
+				outputDL.innerHTML = this.value;
+			}
+
+			var sliderWidth = document.getElementById("width");
+			var outputWidth = document.getElementById("owidth");
+			outputWidth.innerHTML = sliderWidth.value;
+			
+			sliderWidth.oninput = function() {
+				outputWidth.innerHTML = this.value;
+			}
+
+			document.oninput = function()
+						{
+							b = document.getElementById("width").valueAsNumber;
+							d = document.getElementById("depth").valueAsNumber;																	
+							dl = document.getElementById("DL").valueAsNumber;
+							ll = document.getElementById("LL").valueAsNumber;
+							t = document.getElementById("trib").valueAsNumber;
+							l = document.getElementById("span").valueAsNumber;
+
+							w = (dl+ll)*t;
+
+							I = (b*d*d*d/12).toFixed(2);
+							E = 1600000;
+							V = (w*l/2).toFixed(0);
+							R = (w*l/2).toFixed(0);
+							M = (w*l*l/8).toFixed(0);
+
+							S = (b*d*d)/6;
+							delta = ((5*(w/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							fb = (M*12/S).toFixed(0);
+							
+							document.getElementById("shear").value = R;
+							document.getElementById("reaction").value = V;
+							document.getElementById("moment").value = M;
+							document.getElementById("delta").value = delta;
+							document.getElementById("fb").value = fb;
+							
+							
+
+							document.getElementById("result").value = S;
+							ans2 = document.getElementById("result");										
+							ans2.value = S;
+							
+						}
+		</script>
+
+		
+		
 		<!-- Bootstrap core JavaScript -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
