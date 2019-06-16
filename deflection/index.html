@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" type="text/css">
+
+		<meta name="description" content="Everything you need to know about how to take care of your betta fish, from feeding to breeding to housing to even naming! Learn about betta diseases, aquarium decorations, betta tankmates, and even how to teach your betta how to do tricks!">
+
+		<title>Structural Calcs</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="../styles/custom.css"/>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125408249-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-125408249-1');
+		</script>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+			.box {
+				position: relative;
+				text-align: center;
+				color: white;
+				}
+			.top-left {
+				position: absolute;
+				top: 8px;
+				left: 16px;
+				background-color: black;
+				padding-left: 20px;
+				padding-right: 20px;
+				}
+
+			input[type=range] {
+			width: 75%;
+			}
+			
+
+		</style>
+
+		<style>
+			
+			
+			.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 15px;
+			border-radius: 5px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			}
+			
+			.slider:hover {
+			opacity: 1;
+			}
+			
+			.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #007042;
+			cursor: pointer;
+			}
+			
+			.slider::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #4CAF50;
+			cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<div id="nav"></div>
+		<script>
+				$('#nav').load('../scripts/menu.html')
+		</script>		
+		<!-- Page Content -->
+		<br>
+		<div class="container">
+			<div class="card bg-light border-success" style="border-color: #007042!important; border: 1px solid rgba(0,0,0,.125);">
+				<div class="card-header" style="color: #007042">
+					<h2>Simple Beam Bending Calc</h2>
+				</div>
+				<div class="card-body" style="color: #007042">
+					<!--<script>
+						function bending()
+						{
+							b = document.getElementById("width").valueAsNumber;
+							d = document.getElementById("depth").valueAsNumber;																	
+							dl = document.getElementById("DL").valueAsNumber;
+							ll = document.getElementById("LL").valueAsNumber;
+							t = document.getElementById("trib").valueAsNumber;
+							l = document.getElementById("span").valueAsNumber;
+
+							w = (dl+ll)*t;
+
+							I = (b*d*d*d/12).toFixed(2);
+							E = 1600000;
+							V = (w*l/2).toFixed(0);
+							R = (w*l/2).toFixed(0);
+							M = (w*l*l/8).toFixed(0);
+
+							S = (b*d*d)/6;
+							delta = ((5*(w/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							fb = (M*12/S).toFixed(0);
+							
+							document.getElementById("shear").value = R;
+							document.getElementById("reaction").value = V;
+							document.getElementById("moment").value = M;
+							document.getElementById("delta").value = delta;
+							document.getElementById("fb").value = fb;
+							
+							
+
+							document.getElementById("result").value = S;
+							ans2 = document.getElementById("result");										
+							ans2.value = S;
+							
+						}
+					</script>
+				-->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row">
+									<h3>Input</h3>
+							</div>			
+							<form>
+								<div class="form-group row">
+									<label for="width" class="col-sm-4 col-form-label">Width (in.)</label>
+									<div class="col-sm-8">
+										<input type="range" min=".125" max="9.25" value="1.5" step=".125" class="slider" list="widthticks" id="width" onchange="bending()">									
+										<datalist id="widthticks">
+												<option>1.5</option>	
+												<option>1.75</option>
+												<option>2.5</option>
+												<option>3.5</option>
+											</datalist>
+										<span id="owidth"></span> in	
+										
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="depth" class="col-sm-4 col-form-label">Depth (in.)</label>
+									<div class="col-sm-8">
+											<input type="range" min=".125" max="13.5" value="7.25" step=".125" class="slider" id="depth" onchange="bending()">									
+											<span id="odepth"></span> in
+									</div>
+								</div>
+								<div class="form-group row">
+										<label for="DL" class="col-sm-4 col-form-label">Dead Load (PSF)</label>
+										<div class="col-sm-8">
+											<input type="range" min="0" max="30" value="10" step="1" class="slider" id="DL" onchange="bending()">									
+											<span id="oDL"></span> PSF
+										</div>
+								</div>
+								<div class="form-group row">
+									<label for="LL" class="col-sm-4 col-form-label">Live Load (PSF)</label>
+									<div class="col-sm-8">
+										<input type="range" min="0" max="100" value="20" step="20" class="slider" id="LL" onchange="bending()">									
+										<span id="oLL"></span> PSF								
+									</div>
+								</div>
+								<div class="form-group row">
+										<label for="trib" class="col-sm-4 col-form-label">Tributary Width (ft)</label>
+										<div class="col-sm-8">
+											<input type="range" min=".25" max="20" value="10" step="0.01" class="slider" list="tribticks" id="trib" onchange="bending()">									
+											<datalist id="tribticks">
+													<option>1</option>
+													<option>1.33</option>
+													<option>1.5</option>
+													<option>2</option>
+												</datalist>
+											<span id="otrib"></span> ft											
+										</div>
+								</div>
+								<div class="form-group row">
+										<label for="span" class="col-sm-4 col-form-label">Span (ft)</label>
+										<div class="col-sm-8">
+											<input type="range" min=".25" max="20" value="10" step="0.25" class="slider" list="spanticks" id="span" onchange="bending()">									
+											<!--<datalist id="spanticks">
+													<option>1</option>	
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>9</option>
+													<option>10</option>	
+													<option>11</option>	
+													<option>12</option>	
+													<option>13</option>	
+													<option>14</option>	
+													<option>15</option>
+													<option>16</option>	
+													<option>17</option>	
+													<option>18</option>	
+													<option>19</option>	
+												</datalist>-->
+											<span id="ospan"></span> ft
+										</div>
+								</div>
+								
+							</form>
+						</div>
+
+						
+					
+						<div class="col-md-6">	
+							<div class="row">
+									<h3>Results</h3>
+							</div>
+							<form>
+								<div class="form-group row">
+									<label for="reaction" class="col-sm-3 col-form-label">R = V (lbs)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control" id="reaction" placeholder="0" onchange="bending()">
+									</div>
+								</div>
+								<div class="form-group row">
+										<label for="shear" class="col-sm-3 col-form-label">V<sub>max</sub> (lbs)</label>
+										<div class="col-sm-9">
+											<input type="number" class="form-control" id="shear" placeholder="0" onchange="bending()">
+										</div>
+								</div>
+								<div class="form-group row">
+										<label for="moment" class="col-sm-3 col-form-label">M (ft-lbs)</label>
+										<div class="col-sm-9">
+											<input type="number" class="form-control" id="moment" placeholder="0" onchange="bending()">
+										</div>
+								</div>
+								<div class="form-group row">
+										<label for="deltaDL" class="col-sm-3 col-form-label">&Delta;<sub>D+L actual</sub></label>
+										<div class="col-sm-3">
+											<input type="number" class="form-control" id="deltaDL" placeholder="0" onchange="bending()">
+										</div>	
+										<label for="deltaDLall" class="col-sm-3 col-form-label">&Delta;<sub>D+L allowed</sub></label>
+										<div class="col-sm-3">
+											<input type="number" class="form-control" id="deltaDLall" placeholder="0" onchange="bending()">
+										</div>										
+								</div>
+								<div class="form-group row">
+										<label for="deltaL" class="col-sm-3 col-form-label">&Delta;<sub>L actual</sub></label>
+										<div class="col-sm-3">
+											<input type="number" class="form-control" id="deltaL" placeholder="0" onchange="bending()">
+										</div>
+										<label for="deltaLall" class="col-sm-3 col-form-label">&Delta;<sub>L allowed</sub></label>
+										<div class="col-sm-3">
+											<input type="number" class="form-control" id="deltaLall" placeholder="0" onchange="bending()">
+										</div>									
+								</div>
+								<div class="form-group row">
+										<label for="fb" class="col-sm-3 col-form-label">f<sub>b</sub> (psi)</label>
+										<div class="col-sm-9">
+											<input type="number" class="form-control" id="fb" placeholder="0" onchange="bending()">
+										</div>										
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+		<br>
+		<script>
+			var sliderWidth = document.getElementById("width");
+			var outputWidth = document.getElementById("owidth");
+			outputWidth.innerHTML = sliderWidth.value;
+			
+			sliderWidth.oninput = function() {
+				outputWidth.innerHTML = this.value;
+			}
+			
+			var sliderDepth = document.getElementById("depth");
+			var outputDepth = document.getElementById("odepth");
+			outputDepth.innerHTML = sliderDepth.value;
+			
+			sliderDepth.oninput = function() {
+				outputDepth.innerHTML = this.value;
+			}
+			
+			var sliderDL = document.getElementById("DL");
+			var outputDL = document.getElementById("oDL");
+			outputDL.innerHTML = sliderDL.value;
+			
+			sliderDL.oninput = function() {
+				outputDL.innerHTML = this.value;
+			}
+
+			var sliderLL = document.getElementById("LL");
+			var outputLL = document.getElementById("oLL");
+			outputLL.innerHTML = sliderLL.value;
+			
+			sliderLL.oninput = function() {
+				outputLL.innerHTML = this.value;
+			}
+
+			
+
+			var sliderTrib = document.getElementById("trib");
+			var outputTrib = document.getElementById("otrib");
+			outputTrib.innerHTML = sliderTrib.value;
+				
+			sliderTrib.oninput = function() {
+					outputTrib.innerHTML = this.value;
+			}
+
+			var sliderSpan = document.getElementById("span");
+			var outputSpan = document.getElementById("ospan");
+			outputSpan.innerHTML = sliderSpan.value;
+			
+			sliderSpan.oninput = function() {
+				outputSpan.innerHTML = this.value;
+			}
+
+			document.oninput = function()
+						{
+							b = document.getElementById("width").valueAsNumber;
+							d = document.getElementById("depth").valueAsNumber;																	
+							dl = document.getElementById("DL").valueAsNumber;
+							ll = document.getElementById("LL").valueAsNumber;
+							t = document.getElementById("trib").valueAsNumber;
+							l = document.getElementById("span").valueAsNumber;
+
+							w = (dl+ll)*t;
+							wdl = (dl)*t;
+							wll = (ll)*t;
+
+							I = (b*d*d*d/12).toFixed(20);
+							E = 1600000;
+							V = (w*l/2).toFixed(0);
+							R = (w*l/2).toFixed(0);
+							M = (w*l*l/8).toFixed(0);
+
+							S = (b*d*d)/6;
+							deltaDL = ((5*(w/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							deltaDLall= ((l*12)/240).toFixed(2);
+							
+							deltaL = ((5*(wll/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							deltaLall = ((l*12)/360).toFixed(2);
+							
+							fb = (M*12/S).toFixed(0);
+							
+							
+							
+							document.getElementById("reaction").value = V;
+							document.getElementById("shear").value = R;
+							document.getElementById("moment").value = M;
+							document.getElementById("deltaDL").value = deltaDL;
+							document.getElementById("deltaDLall").value = deltaDLall;
+							document.getElementById("fb").value = fb;
+							document.getElementById("deltaL").value = deltaL;
+							document.getElementById("deltaLall").value = deltaLall;
+							
+							
+						
+						}
+		</script>
+
+		
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+		<div class="jumbotron jumbotron-fluid bg-dark text-white text-center py-1" style="margin-bottom:0">
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">						
+					</div>
+					<div class="col-md-4 text-center">
+						<p><small>&copy; 2018 Copyright: BETTACARE101.COM</small></p>						
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="fb-like" data-href="https://www.facebook.com/BettaCare101/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

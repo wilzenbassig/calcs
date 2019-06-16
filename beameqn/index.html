@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" type="text/css">
+
+		<meta name="description" content="Everything you need to know about how to take care of your betta fish, from feeding to breeding to housing to even naming! Learn about betta diseases, aquarium decorations, betta tankmates, and even how to teach your betta how to do tricks!">
+
+		<title>Structural Calcs</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="../styles/custom.css"/>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125408249-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-125408249-1');
+		</script>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+			.box {
+				position: relative;
+				text-align: center;
+				color: white;
+				}
+			.top-left {
+				position: absolute;
+				top: 8px;
+				left: 16px;
+				background-color: black;
+				padding-left: 20px;
+				padding-right: 20px;
+				}
+
+			input[type=range] {
+			width: 75%;
+			}
+			
+
+		</style>
+
+		<style>
+			
+			
+			.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 15px;
+			border-radius: 5px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			}
+			
+			.slider:hover {
+			opacity: 1;
+			}
+			
+			.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #007042;
+			cursor: pointer;
+			}
+			
+			.slider::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #4CAF50;
+			cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<div id="nav"></div>
+		<script>
+				$('#nav').load('../scripts/menu.html')
+		</script>		
+		<!-- Page Content -->
+		<br>
+		<div class="container">
+				<iframe src="/beameqn.pdf#toolbar=0" width="100%" height="500px">
+		</div>
+		<br>
+		<script>
+			var sliderWidth = document.getElementById("width");
+			var outputWidth = document.getElementById("owidth");
+			outputWidth.innerHTML = sliderWidth.value;
+			
+			sliderWidth.oninput = function() {
+				outputWidth.innerHTML = this.value;
+			}
+			
+			var sliderDepth = document.getElementById("depth");
+			var outputDepth = document.getElementById("odepth");
+			outputDepth.innerHTML = sliderDepth.value;
+			
+			sliderDepth.oninput = function() {
+				outputDepth.innerHTML = this.value;
+			}
+			
+			var sliderDL = document.getElementById("DL");
+			var outputDL = document.getElementById("oDL");
+			outputDL.innerHTML = sliderDL.value;
+			
+			sliderDL.oninput = function() {
+				outputDL.innerHTML = this.value;
+			}
+
+			var sliderLL = document.getElementById("LL");
+			var outputLL = document.getElementById("oLL");
+			outputLL.innerHTML = sliderLL.value;
+			
+			sliderLL.oninput = function() {
+				outputLL.innerHTML = this.value;
+			}
+
+			
+
+			var sliderTrib = document.getElementById("trib");
+			var outputTrib = document.getElementById("otrib");
+			outputTrib.innerHTML = sliderTrib.value;
+				
+			sliderTrib.oninput = function() {
+					outputTrib.innerHTML = this.value;
+			}
+
+			var sliderSpan = document.getElementById("span");
+			var outputSpan = document.getElementById("ospan");
+			outputSpan.innerHTML = sliderSpan.value;
+			
+			sliderSpan.oninput = function() {
+				outputSpan.innerHTML = this.value;
+			}
+
+			document.oninput = function()
+						{
+							b = document.getElementById("width").valueAsNumber;
+							d = document.getElementById("depth").valueAsNumber;																	
+							dl = document.getElementById("DL").valueAsNumber;
+							ll = document.getElementById("LL").valueAsNumber;
+							t = document.getElementById("trib").valueAsNumber;
+							l = document.getElementById("span").valueAsNumber;
+
+							w = (dl+ll)*t;
+							wdl = (dl)*t;
+							wll = (ll)*t;
+
+							I = (b*d*d*d/12).toFixed(20);
+							E = 1600000;
+							V = (w*l/2).toFixed(0);
+							R = (w*l/2).toFixed(0);
+							M = (w*l*l/8).toFixed(0);
+
+							S = (b*d*d)/6;
+							deltaDL = ((5*(w/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							deltaDLall= ((l*12)/240).toFixed(2);
+							
+							deltaL = ((5*(wll/12)*(l*12)**4)/(384*E*I)).toFixed(2);
+							deltaLall = ((l*12)/360).toFixed(2);
+							
+							fb = (M*12/S).toFixed(0);
+							
+							
+							
+							document.getElementById("reaction").value = V;
+							document.getElementById("shear").value = R;
+							document.getElementById("moment").value = M;
+							document.getElementById("deltaDL").value = deltaDL;
+							document.getElementById("deltaDLall").value = deltaDLall;
+							document.getElementById("fb").value = fb;
+							document.getElementById("deltaL").value = deltaL;
+							document.getElementById("deltaLall").value = deltaLall;
+							
+							
+						
+						}
+		</script>
+
+		
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+		<div class="jumbotron jumbotron-fluid bg-dark text-white text-center py-1" style="margin-bottom:0">
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">						
+					</div>
+					<div class="col-md-4 text-center">
+						<p><small>&copy; 2018 Copyright: BETTACARE101.COM</small></p>						
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="fb-like" data-href="https://www.facebook.com/BettaCare101/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
