@@ -53,6 +53,36 @@
 			
 
 		</style>
+
+		<style>
+		ul.bullets {
+			list-style: none;
+		}
+
+		ul.bullets li::before {
+			content: "\00BB";
+			color: #007042;
+			display: inline-block; 
+			font-weight: bold;
+			width: 1em;
+			margin-left: -1em;
+		}
+		</style>
+
+		<style>
+		.green {
+			border-color: #007042!important; 
+			border: 1px solid rgba(0,0,0,.125);
+		}
+		</style>
+
+		<style>
+		#feature a:link {color:#007042 }    /* unvisited link */
+		#feature a:visited {color:#007042;} /* visited link */
+		#feature a:hover {color:#007042;}   /* mouse over link */
+		
+		</style>
+
 	</head>
 	<body>
 		<!-- Navigation -->
@@ -62,9 +92,9 @@
 		</script>		
 		<!-- Page Content -->
 		<br>
-		<div class="container">
-				<div class="card" >
-					<h1 class="card-header border-success">
+		<div class="container" id="feature">
+				<div class="card green" >
+					<h1 class="card-header" style="color: #007042;">
 						Useful Links
 					</h1>
 					<div class="card-body">
@@ -74,28 +104,29 @@
 						<div class="col-sm-4">
 							<strong>Catalog Links</strong>
 							<h6>Weyerhaeuser</h6>
-							<ul>
+							<ul class="bullets">
 								<li><a href="https://www.weyerhaeuser.com/application/files/5015/3417/5537/TJ-4000.pdf">TJ-4000 - TJI® Joist Specifier’s Guide</a></li>
 								<li><a href="https://www.weyerhaeuser.com/application/files/4415/1128/9357/TJ-9000.pdf">TJ-9000 - PSL, LVL, and LSL</a></li>
 							</ul>
 							<hr>
 							<h6>Simpson StrongTie</h6>
-							<ul>
+							<ul class="bullets">
 								<li><a href="https://embed.widencdn.net/pdf/plus/ssttoolbox/jg8ztjcq8z/C-C-2019.pdf">Wood Construction Connectors</a></li>
 								<li><a href="http://embed.widencdn.net/pdf/plus/ssttoolbox/t5ymp2ild2/C-L-SW17.pdf">Wood/Steel Strong-Wall</a></li>
 								<li><a href="https://embed.widencdn.net/pdf/plus/ssttoolbox/7sru6j8lpk/C-A-2018.pdf">Anchoring, Fastening and Restoration Systems for Concrete and Masonry</a></li>
 								<li><a href="https://embed.widencdn.net/pdf/plus/ssttoolbox/cubj0dwwdn/C-F-2017.pdf">Fastening Systems Catalog</a></li>
 							</ul>
+							<hr>
 						</div>
 						<div class="col-sm-4">
 							<strong>ICC-ES Report</strong>
-							<ul>
+							<ul class="bullets">
 								<li><a href="https://www.icc-es.org/wp-content/uploads/report-directory/ESR-2236.pdf">Simpson SDS Screws</a></li>
 								<li><a href="http://www.iapmoes.org/media/20738/er_0192.pdf">Simpson SDWS Timber Screws</a></li>
 							</ul>
 							<hr>
 							<strong>Design Software/Websites</strong>
-							<ul>
+							<ul class="bullets">
 								<li><a href="https://www.forteweb.com">Forte (Weyerhaeuser)</a></li>
 								<li><a href="https://www.bccalc.com">BC Calc (Boise Cascade)</a></li>
 								<li><a href="https://www2.strongtie.com/software/anchordesigner.html">Anchor Designer (Simpson)</a></li>
@@ -105,7 +136,7 @@
 						</div>	
 						<div class="col-sm-4">
 							<strong>Miscellaneous Links</strong>
-							<ul>
+							<ul class="bullets">
 								<li><a href="https://docs.google.com/document/d/1Jsm0c5kqBTxuDC72lt0fYmdMsQ0et6jy7-HmAddVDls/edit?usp=sharing">Building Department Addresses</a></li>
 								<li><a href="https://docs.google.com/document/d/1teqXR06HQ2C4CqfTDA7wvIXBbux59Kv3BoSw4WZSKZc/edit?usp=sharing">VSE Shipping and Outside Reproductions Instructions</a></li>
 								<li><a href="https://docs.google.com/document/d/1f0TdHVyFIxADHwMaddjqFBqj7QrV9R2y3t2XrTcpohs/edit?usp=sharing">Calc Packet Header Instructions</a></li>
