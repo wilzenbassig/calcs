@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" type="text/css">
+
+		<meta name="description" content="">
+
+		<title>Structural Calcs</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="../styles/custom.css"/>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125408249-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-125408249-1');
+		</script>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+			.box {
+				position: relative;
+				text-align: center;
+				color: white;
+				}
+			.top-left {
+				position: absolute;
+				top: 8px;
+				left: 16px;
+				background-color: black;
+				padding-left: 20px;
+				padding-right: 20px;
+				}
+
+			input[type=range] {
+			width: 75%;
+			}
+			
+
+		</style>
+
+		<style>
+		ul.bullets {
+			list-style: none;
+		}
+
+		ul.bullets li::before {
+			content: "\00BB";
+			color: #007042;
+			display: inline-block; 
+			font-weight: bold;
+			width: 1em;
+			margin-left: -1em;
+		}
+		</style>
+
+		<style>
+		.green {
+			border-color: #007042!important; 
+			border: 1px solid rgba(0,0,0,.125);
+		}
+		</style>
+
+		<style>
+		#feature a:link {color:#007042 }    /* unvisited link */
+		#feature a:visited {color:#007042;} /* visited link */
+		#feature a:hover {color:#007042;}   /* mouse over link */
+		
+		</style>
+
+	</head>
+	<body>
+		<!-- Navigation -->
+		<div id="nav"></div>
+		<script>
+				$('#nav').load('../scripts/menu.html')
+		</script>		
+		<!-- Page Content -->
+		<br>
+		<br>
+		<div class="container text-center">
+			<div class="alert alert-success text-center" role="alert"> 
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Under construction. Some links may not work</strong> 
+			</div>
+		</div>
+		<div class="container" id="feature">
+			<div class="card green" >
+				<h1 class="card-header" style="color: #007042;">
+						Codes and References
+				</h1>
+				<div class="card-body">
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<strong>Current Building Codes</strong>
+							<h6>2019 California Building Code</h6>
+							<ul class="bullets">
+								<li>Vol 1 ( <a href="https://codes.iccsafe.org/content/CABCV12019/cover" target="_blank">Direct </a> | <a href="http://google.com" target="_blank"> PDF</a> )</li>
+								<li>Vol 2 ( <a href="https://codes.iccsafe.org/content/CABCV22019/cover" target="_blank">Direct </a> | <a href="http://google.com" target="_blank"> PDF</a> )</li>
+							</ul>
+							<h6>2019 California Residential Code</h6>
+							<ul class="bullets">
+								<li><a href="https://codes.iccsafe.org/content/CARC2019/cover" target="_blank">Direct </a> | <a href="http://google.com" target="_blank"> PDF</a></li>
+							</ul>
+							<h6>2019 California Existing Building Code</h6>
+							<ul class="bullets">
+								<li><a href="https://up.codes/viewer/california/ca-existing-building-code-2019" target="_blank">Direct </a></li>
+							</ul>
+							<hr>
+							<h6>2018 International Building Code</h6>
+							<ul class="bullets">
+								<li><a href="https://codes.iccsafe.org/content/IBC2018P4" target="_blank">4th Printing Jan 2020</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<strong>ASCE Publications</strong>
+							<ul class="bullets">
+								<li><a href="https://drive.google.com/open?id=1LD3Owz_fQOgjQ3F8g92q_d9V90ai6qg9" target="_blank" data-toggle="tooltip" title="Minimum Design Loads and Associated Criteria for Buildings and Other Structures">ASCE 7-16</a>
+									<ul class="bullets">
+										<li><a href="https://drive.google.com/open?id=1nvfUZGhcpZzW3BauFDJ0G7O5Vfuot7_4" target="_blank" data-toggle="tooltip" title="Guide to the Seismic Load Provisions of ASCE 7-16">Seismic Design Guide</a></li>
+										<li><a href="https://drive.google.com/open?id=1yEu8AnV5pqCxyb3pd6PV9Mleajt8hdEw" target="_blank" data-toggle="tooltip" title="Guide to the Wind Load Provisions of ASCE 7-16">Wind Design Guide</a></li>
+									</ul>
+								</li>
+								<li><a href="https://drive.google.com/open?id=1wXq4kTKgrKKEQMnjI4XqQ3PsFk-GQ8nF" target="_blank" data-toggle="tooltip" title="Minimum Design Loads and Associated Criteria for Buildings and Other Structures">ASCE 7-10</a></li>
+								<li><a href="https://drive.google.com/open?id=1OswXd-gUFARuUOCsBp-xGo0xxbHcRUwO" target="_blank" data-toggle="tooltip" title="Minimum Design Loads and Associated Criteria for Buildings and Other Structures">ASCE 7-05</a></li>
+								<li><a href="https://drive.google.com/open?id=1lg7SNbryXSFunL5TYFbJbTFXLxF15cpF" target="_blank" data-toggle="tooltip" title="Seismic Retrofit and Evaluation of Existing Buildings">ASCE 41-13</a></li>
+							</ul>
+							
+						</div>	
+
+						<div class="col-sm-4">
+							<strong>National Design Specification (NDS)</strong>
+							<ul class="bullets">
+								<li><a href="https://drive.google.com/open?id=1yIHy7n25f3n_jZajhEkCbkp07W3XExJ5" target="_blank" data-toggle="tooltip" title="NDS for Wood Construction, 2018 Edition">NDS 2018</a></li>
+								<li><a href="https://drive.google.com/open?id=1P5nXyMP2OwncZEBng71yEoJ7MB-VH2Gg" target="_blank" data-toggle="tooltip" title="Special Design Provisions for Wind and Seismic, 2015 Edition">SDPWS 2015</a></li>
+								<li><a href="https://awc.org/codes-standards/publications/sdpws-2021" target="_blank" data-toggle="tooltip" title="Special Design Provisions for Wind and Seismic, 2021 Edition">(SDPWS 2021)</a></li>
+								<li><a href="https://drive.google.com/open?id=11MD654S0_ZYfbSFLexe8lC-118YMrGM0" target="_blank" data-toggle="tooltip" title="NDS Supplement: Design Values for Wood Construction, 2018 Edition">NDS - Supplement 2018</a></li>
+								<li><a href="https://drive.google.com/open?id=1Xz2eUrW64l2-4YRw_yQ4BBbF73B6_7j-" target="_blank" data-toggle="tooltip" title="Manual for Engineered Wood Construction, 2018 Edition">NDS Manual 2018</a></li>
+							</ul>
+
+							<strong>American Concrete Institute - ACI</strong>
+							<ul class="bullets">
+								<li><a href="https://drive.google.com/file/d/1EoXlY3Jur-vpK8-LIfy4BchcLNgaTfdh/view?usp=sharing" target="_blank">ACI 318-14</a></li>
+							</ul>
+
+							<strong>Masonry</strong>								
+							<ul class="bullets">
+								<li>TMS 402-16 and TMS 602-16</li>
+								<li><a href="https://drive.google.com/open?id=1OEo-BY1plJqBSn2axCo18OZd41oyZhHd" target="_blank">TMS 402-11 and TMS 602-11</a></li>
+							</ul>
+
+							<strong>Steel</strong>								
+							<ul class="bullets">
+								<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/a360-16-spec-and-commentary_june-2019_linked.pdf" target="_blank" data-toggle="tooltip" title="Specification for Structural Steel Buildings">AISC 360-16</a></li>
+								<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/aisc-341-16_june-2018_linked.pdf" target="_blank" data-toggle="tooltip" title="Seismic Provisions for Structural Steel Buildings">AISC 341-16</a></li>
+								<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/a358-18w.pdf" target="_blank" data-toggle="tooltip" title="Prequalified Connections for Special and Intermediate Steel Moment Frames for Seismic Applications">AISC 358-16</a></li>
+							</ul>
+
+
+						</div>	
+					</div>
+				</div>
+			</div>
+			<br>
+				<div class="card green" >
+					<h1 class="card-header" style="color: #007042;">
+						Wood
+					</h1>
+					<div class="card-body">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 ">
+								<h6><strong>National Design Specification (NDS) for Wood Construction</strong></h6>
+								<div class="row">
+									<div class="col-4">
+										<a href="https://drive.google.com/open?id=1yIHy7n25f3n_jZajhEkCbkp07W3XExJ5" target="_blank"><img src="https://awc.org/img/codes-standards/publications/standards/nds/nds_2018.jpg" class="img-fluid ml-3"></a>
+									</div>
+									<div class="col-8">
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/open?id=1yIHy7n25f3n_jZajhEkCbkp07W3XExJ5" target="_blank">2018</a></li>
+											<li><a href="https://drive.google.com/file/d/1MKn33cJhZKix_Noe2Zh-c8vzWYPQewXM/view?usp=sharing" target="_blank">2015</a></li>
+											<li><a href="https://drive.google.com/file/d/19nrP7nzzxjQntAVo_HR4td0kmUzZlGfP/view?usp=sharing" target="_blank">2012</a></li>
+										</ul>
+									</div>
+								</div>
+								<br>
+								<br>
+							</div>
+
+							<div class="col-sm-6">
+								<h6><strong>Special Design Provisions for Wind and Seismic (SDPWS)</strong></h6>
+								<div class="row">
+									<div class="col-4">
+										<a href="https://drive.google.com/file/d/1P5nXyMP2OwncZEBng71yEoJ7MB-VH2Gg/view?usp=sharing" target="_blank"><img src="https://awc.org/img/codes-standards/publications/standards/sdpws/sdpws_2021.jpg" class="img-fluid ml-3"></a>
+									</div>
+								
+									<div class="col-8">	
+										<ul class="bullets">
+											<li><a href="https://awc.org/codes-standards/publications/sdpws-2021" target="_blank">2021</a></li>
+											<li><a href="https://drive.google.com/file/d/1P5nXyMP2OwncZEBng71yEoJ7MB-VH2Gg/view?usp=sharing" target="_blank">2015</a></li>
+											<li><a href="https://drive.google.com/file/d/1kwQ1YitGhLRzwFGqpbH_sxkQ3v2gplu4/view?usp=sharing" target="_blank">2008</a></li>
+											<li><a href="https://drive.google.com/file/d/1Mu8t3gSFBjCVggjIzS1mwvDjAieuiCIh/view?usp=sharing" target="_blank">2005</a></li>
+										</ul>
+									</div>
+								</div>
+								<br>
+								<br>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<h6><strong>NDS for Wood Construction - Supplement</strong></h6>
+
+								<div class="row">	
+
+									<div class="col-4">
+										<a href="https://drive.google.com/file/d/11MD654S0_ZYfbSFLexe8lC-118YMrGM0/view?usp=sharing" target="_blank"><img src="https://www.awc.org/img/codes-standards/publications/standards/nds/nds_2018_supplement.jpg" class="img-fluid ml-3"></a>
+									</div>
+									
+									<div class="col-8">
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/file/d/11MD654S0_ZYfbSFLexe8lC-118YMrGM0/view?usp=sharing" target="_blank">2018</a></li>
+											<li><a href="https://drive.google.com/file/d/1bLpab_hV7lDPbhGunfMLWL3586Kw6idq/view?usp=sharing" target="_blank">2015</a></li>
+											<li><a href="https://drive.google.com/file/d/1xw7qXvuTnwpUGjBY670Nj83aupYquP9G/view?usp=sharing" target="_blank">2012</a></li>
+										</ul>
+									</div>
+
+								</div>
+								<br>
+								<br>
+							</div>
+
+							<div class="col-sm-6">
+								<h6><strong>Manual for Engineered Wood Construction</strong></h6>
+								<div class="row">
+									<div class="col-4">
+										<a href="https://drive.google.com/file/d/1Xz2eUrW64l2-4YRw_yQ4BBbF73B6_7j-/view?usp=sharing" target="_blank"><img src="https://www.awc.org/img/codes-standards/publications/standards/nds/nds_2018_manual.jpg" class="img-fluid ml-3"></a>
+									</div>
+									
+
+									<div class="col-8">
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/file/d/1Xz2eUrW64l2-4YRw_yQ4BBbF73B6_7j-/view?usp=sharing" target="_blank">2018</a></li>
+											<li><a href="https://drive.google.com/file/d/1Vi3eP06BE5k0azNJKLbMXBYnDF6XiP80/view?usp=sharing" target="_blank">2015</a></li>
+											<li><a href="https://drive.google.com/file/d/1vIraKJCLRNf-wYUv6qC-loLPeaIMJzlw/view?usp=sharing" target="_blank">2012</a></li>
+										</ul>
+									</div>
+								</div>
+								<br>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="card green" >
+					<h1 class="card-header" style="color: #007042;">
+						Concrete and Masonry
+					</h1>
+					<div class="card-body">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 ">
+								<h6><strong>Concrete</strong></h6>
+								<h6>Building Code Requirements for Structural Concrete</h6>
+								<div class="row">
+
+									<div class="col-4">
+										<a href="https://drive.google.com/file/d/1EoXlY3Jur-vpK8-LIfy4BchcLNgaTfdh/view?usp=sharing" target="_blank"><img src="https://www.buildersbook.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/9/7/9780870319303-20.jpg" class="img-fluid ml-3"></a>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-8">										
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/file/d/1EoXlY3Jur-vpK8-LIfy4BchcLNgaTfdh/view?usp=sharing" target="_blank">ACI 318-14</a></li>
+											<li><a href="https://drive.google.com/file/d/1QhTOf0GrDlq0l6ajx5f25NRQxZrwuaL1/view?usp=sharing" target="_blank">ACI 318-11</a></li>
+										</ul>										
+									</div>
+
+								</div>
+	
+							</div>
+						
+							<div class="col-sm-6">
+								<h6><strong>Masonry</strong></h6>
+								<h6>Building Code Requirements for Masonry Structures</h6>
+								<div class="row">
+									<div class="col-4">
+										<a href="https://drive.google.com/open?id=1OEo-BY1plJqBSn2axCo18OZd41oyZhHd" target="_blank"><img src="https://masonrysociety.org/wp-content/uploads/2013/06/2011MSJC-Cover.jpg" class="img-fluid ml-3"></a>
+									</div>	
+									<div class="col-8">
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/open?id=1OEo-BY1plJqBSn2axCo18OZd41oyZhHd" target="_blank">TMS 402-11 and TMS 602-11</a></li>
+										</ul>
+									</div>
+								</div>	
+								<br>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="card green" >
+					<h1 class="card-header" style="color: #007042;">
+						Steel
+					</h1>
+					<div class="card-body">
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<h6><strong>Specification for Structural Steel Buildings</strong></h6>
+								<div class="row">
+									<div class="col-4">
+										<a href="https://www.aisc.org/globalassets/aisc/publications/standards/a360-16-spec-and-commentary_june-2019_linked.pdf" target="_blank"><img src="https://www.aisc.org/globalassets/aisc/covers/specification-for-structural-steel-buildings_a360-16.jpg" class="img-fluid ml-3"></a>
+										<br>
+										<br>
+									</div>
+									
+									<div class="col-8">
+										<ul class="bullets">
+											<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/a360-16-spec-and-commentary_june-2019_linked.pdf" target="_blank">AISC 360-16</a><!--https://drive.google.com/open?id=1o_YQALOVdDNViCTxlYmaF76FSkBMyuXp--></li>
+											<li><a href="https://www.aisc.org/globalassets/product-files-not-searched/historic-standards/a360-10r4w" target="_blank">AISC 360-10</a> <!--https://drive.google.com/open?id=1Sph0QDro1VZaRnOTfRiXDt0akJtT3YAY--></li>						
+										</ul>
+									</div>
+								</div>
+							</div>							
+
+							<div class="col-sm-6">
+								<h6><strong>Seismic Provisions for Structural Steel Buildings</strong></h6>		<div class="row">
+									<div class="col-4">
+										<a href="https://www.aisc.org/globalassets/aisc/publications/standards/aisc-341-16_june-2018_linked.pdf" target="_blank"><img src="https://www.aisc.org/globalassets/aisc/covers/standards/a341-16_cover_reprint.png" class="img-fluid ml-3"></a>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-8">											
+										<ul class="bullets">
+											<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/aisc-341-16_june-2018_linked.pdf" target="_blank">AISC 341-16</a><!--https://drive.google.com/open?id=10jt3Oy7VWmxPjGCnmoBhQ1rULkgfGfJ3--></li>
+											<li><a href="https://drive.google.com/open?id=1wt9HZJzB1iGlILH8rFxaEt8rhzOnnaDj" target="_blank">AISC 341-10</a></li>
+										</ul>
+									</div>
+
+								</div>	
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-sm-6">
+								<h6><strong>Prequalified Connections for Special and Intermediate Steel Moment Frames for Seismic Applications</strong></h6>	
+								
+								<div class="row">
+									<div class="col-4">
+										<a href="https://www.aisc.org/globalassets/aisc/publications/standards/a358-18w.pdf" target="_blank"><img src="https://www.aisc.org/globalassets/aisc/covers/standards/a358-18_cover.png" class="img-fluid ml-3"></a>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-8">	
+										<ul class="bullets">
+											<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/a358-18w.pdf" target="_blank">AISC 358-16</a><!--https://drive.google.com/open?id=1Q7Q6O4HQHfxQJoy2hIVDSDa-TrUL9bJJ--></li>
+											<li><a href="https://www.aisc.org/globalassets/aisc/publications/standards/a358-18w.pdf" target="_blank">AISC 358-10</a><!--https://drive.google.com/open?id=1Q7Q6O4HQHfxQJoy2hIVDSDa-TrUL9bJJ--></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<h6><strong>Steel Construction Manual (Includes AISC 360)</strong></h6>	
+								<div class="row">
+									<div class="col-4">
+										<a href="https://drive.google.com/open?id=16eGBwzRSNSBJGCSEU4JPgtmzvFwGHl8Y" target="_blank"><img src="https://www.structuraldetailertraining.com/site/img/manual.png" class="img-fluid ml-3"></a>
+										<br>
+										<br>
+									</div>
+									
+									<div class="col-8">	
+										<ul class="bullets">
+											<li><a href="https://drive.google.com/open?id=16eGBwzRSNSBJGCSEU4JPgtmzvFwGHl8Y" target="_blank">14th Edition</a></li>
+										</ul>
+									</div>
+								</div>	
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
+		<br>
+	
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+			</script>
+		
+	</body>
+</html>
