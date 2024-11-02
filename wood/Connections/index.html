@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" type="text/css">
+
+		<meta name="description" content="">
+
+		<title>Structural Calcs</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="/styles/custom.css"/>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125408249-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-125408249-1');
+		</script>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+			.box {
+				position: relative;
+				text-align: center;
+				color: white;
+				}
+			.top-left {
+				position: absolute;
+				top: 8px;
+				left: 16px;
+				background-color: black;
+				padding-left: 20px;
+				padding-right: 20px;
+				}
+
+			input[type=range] {
+			width: 75%;
+			}
+        /* Style to make the PDF iframe look seamless */
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            padding-top: 141.42%; /* Adjust the aspect ratio as needed */
+        }
+        .pdf-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+
+		</style>
+
+		<style>
+		ul.bullets {
+			list-style: none;
+		}
+
+		ul.bullets li::before {
+			content: "\00BB";
+			color: #007042;
+			display: inline-block; 
+			font-weight: bold;
+			width: 1em;
+			margin-left: -1em;
+		}
+		</style>
+
+		<style>
+		.green {
+			border-color: #007042!important; 
+			border: 1px solid rgba(0,0,0,.125);
+		}
+		</style>
+
+		<style>
+		#feature a:link {color:#007042 }    /* unvisited link */
+		#feature a:visited {color:#007042;} /* visited link */
+		#feature a:hover {color:#007042;}   /* mouse over link */
+		
+		</style>
+
+	</head>
+	<body>
+		<!-- Navigation -->
+		<div id="nav"></div>
+		<script>
+				$('#nav').load('/scripts/menu.html')
+		</script>		
+		<!-- Page Content -->
+		<br>
+		<br>
+		<div class="container text-center">
+			<div class="alert alert-success text-center" role="alert"> 
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Under construction. Some links may not work</strong> 
+			</div>
+		</div>
+		<div class="container" id="feature">
+			<div class="row">
+				<div class="pdf-container">
+					<iframe class="pdf-iframe" src="https://drive.google.com/file/d/1ooHPvZxsnM-CIYTcXUJEGIfh-idTRisA/view?usp=sharing"></iframe>
+				</div>
+				
+				<!-- Optional JavaScript to resize iframe height (experimental for PDFs) -->
+				<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const iframe = document.querySelector(".pdf-iframe");
+				
+					// Adjust the height to ensure no scroll bars
+					iframe.style.height = `${window.innerHeight}px`;
+					
+					// Recalculate height on window resize
+					window.addEventListener("resize", () => {
+						iframe.style.height = `${window.innerHeight}px`;
+					});
+				});
+				</script>
+				</div>
+			</div>
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+			</script>
+		
+	</body>
+</html>
