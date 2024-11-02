@@ -50,21 +50,25 @@
 			input[type=range] {
 			width: 75%;
 			}
-        /* Style to make the PDF iframe look seamless */
-        .pdf-container {
-            position: relative;
+        table {
             width: 100%;
-            padding-top: 141.42%; /* Adjust the aspect ratio as needed */
+            margin-top: 20px;
         }
-        .pdf-iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            overflow: hidden;
+        th, td {
+            text-align: center;
+            vertical-align: middle;
         }
+        .table-title {
+            text-align: left;
+            font-weight: bold;
+            padding-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .no-border {
+            border-top: none;
+            border-bottom: none;
+        }
+
 
 		</style>
 
@@ -117,9 +121,95 @@
 		</div>
 		<div class="container" id="feature">
 			<div class="row">
-				<div class="pdf-container">
-					<iframe class="pdf-iframe" src="https://drive.google.com/file/d/1ooHPvZxsnM-CIYTcXUJEGIfh-idTRisA/view?usp=sharing"></iframe>
-				</div>
+				<div class="table-title">Table C12.1.6.6 Recommended Minimum Spacing for Nails</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th rowspan="2"></th>
+							<th colspan="2">Wood Side Members</th>
+						</tr>
+						<tr>
+							<th>Not Prebored</th>
+							<th>Prebored</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Edge distance</td>
+							<td>2.5D</td>
+							<td>2.5D</td>
+						</tr>
+						<tr>
+							<td>End distance - tension load parallel to grain</td>
+							<td>15D</td>
+							<td>10D</td>
+						</tr>
+						<tr>
+							<td>End distance - compression load parallel to grain</td>
+							<td>10D</td>
+							<td>5D</td>
+						</tr>
+						<tr>
+							<td>Spacing between fasteners in a row - parallel to grain</td>
+							<td>15D</td>
+							<td>10D</td>
+						</tr>
+						<tr>
+							<td>Spacing between fasteners in a row - perpendicular to grain</td>
+							<td>10D</td>
+							<td>5D</td>
+						</tr>
+						<tr>
+							<td>Spacing between rows of fasteners - in-line</td>
+							<td>5D</td>
+							<td>3D</td>
+						</tr>
+						<tr>
+							<td>Spacing between rows of fasteners - staggered</td>
+							<td>2.5D</td>
+							<td>2.5D</td>
+						</tr>
+			
+						<tr>
+							<th colspan="3" class="text-center">Steel Side Members</th>
+						</tr>
+						<tr>
+							<td>Edge distance</td>
+							<td>2.5D</td>
+							<td>2.5D</td>
+						</tr>
+						<tr>
+							<td>End distance - tension load parallel to grain</td>
+							<td>10D</td>
+							<td>5D</td>
+						</tr>
+						<tr>
+							<td>End distance - compression load parallel to grain</td>
+							<td>5D</td>
+							<td>3D</td>
+						</tr>
+						<tr>
+							<td>Spacing between fasteners in a row - parallel to grain</td>
+							<td>10D</td>
+							<td>5D</td>
+						</tr>
+						<tr>
+							<td>Spacing between fasteners in a row - perpendicular to grain</td>
+							<td>5D</td>
+							<td>2.5D</td>
+						</tr>
+						<tr>
+							<td>Spacing between rows of fasteners - in-line</td>
+							<td>3D</td>
+							<td>2.5D</td>
+						</tr>
+						<tr>
+							<td>Spacing between rows of fasteners - staggered</td>
+							<td>2.5D</td>
+							<td>2.5D</td>
+						</tr>
+					</tbody>
+				</table>
 				
 				<!-- Optional JavaScript to resize iframe height (experimental for PDFs) -->
 				<script>
