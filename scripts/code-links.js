@@ -79,9 +79,6 @@
 	function makeExternalLink(label, url, className) {
 		const link = makeElement("a", className, label);
 		link.href = url;
-		const mark = makeElement("span", "code-external-mark", " ↗");
-		mark.setAttribute("aria-hidden", "true");
-		link.appendChild(mark);
 		return link;
 	}
 
