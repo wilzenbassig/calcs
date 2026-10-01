@@ -1,15 +1,186 @@
-body {
-	font: 400 17px/1.5 Nunito Sans, sans-serif;
-	background-color: #f7f7f7;
+:root {
+	--site-ink: #29362f;
+	--site-muted: #64736b;
+	--site-accent: #526d5b;
+	--site-accent-hover: #354b3c;
+	--site-accent-soft: #eef3ef;
+	--site-border: #d8e0db;
+	--site-page: #f6f8f6;
+	--site-surface: #ffffff;
 }
-/* Remove the navbar's default margin-bottom and rounded borders */ 
 
-.navbar-collapse > .show{
+body {
+	font: 400 17px/1.5 "Nunito Sans", sans-serif;
+	color: var(--site-ink);
+	background-color: var(--site-page);
+	padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+	body {
+		padding-top: 50px;
+	}
+}
+
+body a:link:not(.nav-link):not(.dropdown-item):not(.navbar-brand):not(.btn),
+body a:visited:not(.nav-link):not(.dropdown-item):not(.navbar-brand):not(.btn) {
+	color: var(--site-accent) !important;
+	text-decoration-color: rgba(82, 109, 91, .45);
+}
+
+body a:hover:not(.nav-link):not(.dropdown-item):not(.navbar-brand):not(.btn),
+body a:focus-visible:not(.nav-link):not(.dropdown-item):not(.navbar-brand):not(.btn) {
+	color: var(--site-accent-hover) !important;
+	text-decoration: underline;
+}
+
+body a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: 3px solid rgba(82, 109, 91, .35);
+	outline-offset: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--site-ink);
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.card {
+	background-color: var(--site-surface);
+	border: 1px solid var(--site-border);
+	border-radius: .65rem;
+	box-shadow: 0 2px 9px rgba(33, 50, 40, .055);
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.card.green,
+.card.bg-light.border-success {
+	border-color: var(--site-border) !important;
+}
+
+.card-header {
+	background-color: var(--site-accent-soft);
+	border-bottom: 1px solid var(--site-border);
+	color: var(--site-accent-hover) !important;
+	font-size: 1.25rem;
+	font-weight: 600;
+	padding: .8rem 1.1rem;
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+	color: inherit !important;
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+}
+
+.card-body:empty {
+	display: none;
+}
+
+.card > .container {
+	max-width: 100%;
+}
+
+ul.bullets {
+	list-style: none;
+	padding-left: 1rem;
+}
+
+ul.bullets li::before {
+	content: "\00BB";
+	color: var(--site-accent) !important;
+	display: inline-block;
+	font-weight: 700;
+	width: 1rem;
+	margin-left: -1rem;
+}
+
+.btn {
+	border-radius: .4rem;
+	font-weight: 600;
+}
+
+.btn-primary,
+.btn-success {
+	background-color: var(--site-accent);
+	border-color: var(--site-accent);
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+	background-color: var(--site-accent-hover);
+	border-color: var(--site-accent-hover);
+}
+
+.form-control,
+select,
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+	border-color: #cbd5ce;
+	border-radius: .4rem;
+}
+
+.form-control:focus,
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+	border-color: #91a99a;
+	box-shadow: 0 0 0 .2rem rgba(82, 109, 91, .16);
+}
+
+input[type="range"] {
+	accent-color: var(--site-accent);
+}
+
+.slider::-webkit-slider-thumb {
+	background: var(--site-accent) !important;
+}
+
+.slider::-moz-range-thumb {
+	background: var(--site-accent) !important;
+}
+
+table {
+	background-color: var(--site-surface);
+	color: var(--site-ink);
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+	border-color: var(--site-border);
+}
+
+iframe {
+	max-width: 100%;
+	border: 1px solid var(--site-border);
+	border-radius: .35rem;
+}
+
+/* Shared legacy components */
+.navbar-collapse > .show {
 	border-top-style: solid;
 }
+
 .slick-slider {
 	margin: 30px auto 50px;
 }
+
 .margin10 {
 	margin: 10px;
 	padding: 2%;
@@ -17,16 +188,24 @@ body {
 	text-align: center;
 }
 
+.reference-cover {
+	display: block;
+	width: 100%;
+	max-width: 160px;
+	height: 180px;
+	margin: 0 auto;
+	object-fit: contain;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, .12);
+	border-radius: .25rem;
+}
+
+.reference-cover--product-shot {
+	object-fit: cover;
+	object-position: center;
+}
 
 
-body {
-	padding-top: 54px;
-}
-@media (min-width: 992px) {
-	body {
-		padding-top: 50px;
-	}
-}
 
 .carousel-item:after {
   content:"";
